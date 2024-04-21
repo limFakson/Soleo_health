@@ -2,16 +2,8 @@ import React, { useRef, useState } from "react";
 import "./sections.css";
 
 function services() {
-  const [isActive, setIsActive] = useState(false);
-
-  const readService = useRef(null);
-
-  const handleServiceClick = () => {
-    console.log("handleServiceClick called");
-    if (readService.current) {
-      console.log("services");
-    }
-    setIsActive(!isActive);
+  const handleService = () => {
+    console.log("clicked");
   };
 
   return (
@@ -23,36 +15,27 @@ function services() {
             Explore Our Pharmacy Services
           </h1>
         </div>
-        <div className="services-selection sm:flex sm:gap-12 lg:ml-6 sm:h-[420px] lg:h-[300px] ">
+        <div className="services-selection sm:flex sm:gap-12 lg:ml-6 sm:h-[420px] lg:h-[22rem] ">
           <div className="selector sm:w-[28%] lg:w-[23%] sm:border-[#152456] py-4">
             <ul className="mobile-selector max-sm:flex sm:hidden border-b px-2 border-[#152456] ">
               <li
-                ref={readService}
-                className={`point border-b-2 border-[#152456] border-r px-2 ${
-                  isActive ? "active" : ""
-                }`}
-                onClick={handleServiceClick}
+                className="point border-b-2 border-[#152456] border-r px-2"
+                onClick={handleService}
               >
                 Featured Services
               </li>
-              <li
-                // ref={}
-                className="point border-[#152456] border-r px-2"
-                // onClick={handleServiceClick}
-              >
+              <li className="point border-[#152456] border-r px-2">
                 Healthcare Expertise
               </li>
               <li
                 // ref={}
                 className="point border-[#152456] border-r px-2"
-                // onClick={handleServiceClick}
               >
                 Patient-Centered Approach
               </li>
               <li
                 // ref={}
                 className="point border-[#152456] "
-                // onClick={handleServiceClick}
               >
                 Wellness Tips
               </li>

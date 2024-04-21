@@ -16,9 +16,37 @@
   list-style: disc;
   padding-left: 1.5rem;
 }
+.about-goals {
+  flex-wrap: wrap;
+}
+
+@media (min-width: 1024px) {
+  .goals {
+    width: 25%;
+    height: 9rem;
+  }
+}
 
 @media (min-width: 640px) {
   .selectee {
     overflow-y: scroll;
+  }
+}
+
+@media (max-width: 1023px) and (min-width: 480px) {
+  .goals {
+    width: 48%;
+    gap: 5px;
+    height: 10rem;
+    background-color: #fff;
+  }
+}
+
+@media (max-width: 479px) {
+  .goals {
+    width: auto;
+    gap: 5px;
+    height: 7rem;
+    background-color: #fff;
   }
 }

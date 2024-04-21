@@ -4,7 +4,7 @@ import img5 from "../../assets/img-5.png";
 
 function about() {
   return (
-    <div className="mt-4 bg-[#E3EFFF] mb-4 ">
+    <div className="mt-4 bg-[#E3EFFF] mb-4 pb-4">
       <hr className="section_hr" />
       <section id="about-us" className="my-8 sm:ml-12 sm:mx-8 mx-4 ">
         <div className="about">
@@ -42,7 +42,7 @@ function about() {
               </span>
             </div>
             <div className="img pt-4 lg:w-[50%] ">
-              <img src={img5} alt="medicine_img" className="w-[55rem] mb-4" />
+              <img src={img5} alt="medicine_img" className="w-[55rem] " />
               <span>
                 <h1 className="text-base font-medium">
                   <strong>National Reach, Local Care</strong>
@@ -57,27 +57,33 @@ function about() {
               </span>
             </div>
           </div>
-          <div className="about-goals flex py-4">
-            <div className="mission bg-[#152456] text-white border-[#E3EFFF] border-r ">
+          <div className="about-goals lg:bg-white rounded-xl flex max-lg:gap-2 my-2">
+            <div className="goals border-[#152456] max-lg:border-x lg:border-r p-4 ">
               <h1 className="text-sm font-normal">
-                <strong>Our Mission</strong>
+                <span className="mr-6">
+                  <strong>Our Mission</strong>
+                </span>
                 <br />
                 At Soleo Health, we foster a culture of innovation, offering
                 leading healthcare solutions to simplify complex care.
               </h1>
             </div>
-            <div className="vision bg-[#152456] border-[#E3EFFF] border-x ">
+            <div className="goals border-[#152456] border-x p-4 ">
               <h1 className="text-sm font-normal">
-                <strong>Our Vision</strong>
+                <span className="mb-2">
+                  <strong>Our Vision</strong>
+                </span>
                 <br />
                 We aspire to be the undisputed leader in delivering exceptional
                 care to patients receiving complex therapies across diverse care
                 settings.
               </h1>
             </div>
-            <div className="value bg-[#152456] border-[#E3EFFF] border-l ">
+            <div className="goals border-[#152456] border-x p-4 overflow-y-scroll ">
               <h1 className="text-sm font-normal">
-                <strong>Our Values</strong>
+                <span className="mb-2">
+                  <strong>Our Values</strong>
+                </span>
                 <li>
                   Improve Patients' Lives Every Day: We prioritize patient
                   well-being in all our endeavors.
@@ -102,6 +108,17 @@ function about() {
                   Fun and Collaboration: We believe in enjoying our work and
                   collaborating as a team.
                 </li>
+              </h1>
+            </div>
+            <div className="goals border-[#152456] max-lg:border-x lg:border-l p-4">
+              <h1 className="text-sm font-normal">
+                <span className="mb-2">
+                  <strong>Our Accomplishments</strong>
+                </span>
+                <br />
+                Explore our journey and accomplishments, which speak volumes
+                about our commitment to excellence and innovation in patient
+                care.
               </h1>
             </div>
           </div>
