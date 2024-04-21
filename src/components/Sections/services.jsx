@@ -1,11 +1,23 @@
-import React from "react";
+import React, { useRef, useState } from "react";
 import "./sections.css";
 
 function services() {
+  const [isActive, setIsActive] = useState(false);
+
+  const readService = useRef(null);
+
+  const handleServiceClick = () => {
+    console.log("handleServiceClick called");
+    if (readService.current) {
+      console.log("services");
+    }
+    setIsActive(!isActive);
+  };
+
   return (
     <div className="mt-4">
       <hr className="section_hr" />
-      <section id="services" className="my-4 sm:mx-8">
+      <section id="services" className="my-8 sm:mx-8">
         <div className="service m-4">
           <h1 className="text-center text-4xl font-semibold font-[Oswald] text-[#152456]">
             Explore Our Pharmacy Services
@@ -14,16 +26,36 @@ function services() {
         <div className="services-selection sm:flex sm:gap-12 lg:ml-6 sm:h-[420px] lg:h-[300px] ">
           <div className="selector sm:w-[28%] lg:w-[23%] sm:border-[#152456] py-4">
             <ul className="mobile-selector max-sm:flex sm:hidden border-b px-2 border-[#152456] ">
-              <li className="point border-b-2 border-[#152456] border-r px-2 ">
+              <li
+                ref={readService}
+                className={`point border-b-2 border-[#152456] border-r px-2 ${
+                  isActive ? "active" : ""
+                }`}
+                onClick={handleServiceClick}
+              >
                 Featured Services
               </li>
-              <li className="point border-[#152456] border-r px-2">
+              <li
+                // ref={}
+                className="point border-[#152456] border-r px-2"
+                // onClick={handleServiceClick}
+              >
                 Healthcare Expertise
               </li>
-              <li className="point border-[#152456] border-r px-2">
+              <li
+                // ref={}
+                className="point border-[#152456] border-r px-2"
+                // onClick={handleServiceClick}
+              >
                 Patient-Centered Approach
               </li>
-              <li className="point border-[#152456] ">Wellness Tips</li>
+              <li
+                // ref={}
+                className="point border-[#152456] "
+                // onClick={handleServiceClick}
+              >
+                Wellness Tips
+              </li>
             </ul>
             <ul className="larger-selector max-sm:hidden sm:block px-2 border-[#152456] ">
               <li className="point sm:px-2 lg:pl-6 py-6 sm:border-b border-[#152456] border-r-4 ">
