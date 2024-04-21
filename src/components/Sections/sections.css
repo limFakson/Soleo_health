@@ -8,14 +8,17 @@
 .selector ul li:hover {
   background-color: #e3efff;
 }
-.featured ol {
+.selecteed ol {
   list-style: auto;
   font-weight: 500;
 }
-.featured ul {
+.selecteed ul {
   list-style: disc;
   padding-left: 1.5rem;
 }
-.selectee {
-  overflow-y: scroll;
+
+@media (min-width: 640px) {
+  .selectee {
+    overflow-y: scroll;
+  }
 }
