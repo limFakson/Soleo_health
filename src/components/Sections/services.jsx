@@ -1,9 +1,16 @@
 import React, { useRef, useState } from "react";
-import "./sections.css";
+import "./Section.css";
 
-function services() {
+const services = () => {
+  const featured = useRef();
+
+  if (featured.current) {
+    console.log("Click");
+  }
+
   const handleService = () => {
     console.log("clicked");
+    alert("Hi mom");
   };
 
   return (
@@ -18,12 +25,12 @@ function services() {
         <div className="services-selection sm:flex sm:gap-12 lg:ml-6 sm:h-[420px] lg:h-[22rem] ">
           <div className="selector sm:w-[28%] lg:w-[23%] sm:border-[#152456] py-4">
             <ul className="mobile-selector max-sm:flex sm:hidden border-b px-2 border-[#152456] ">
-              <li
-                className="point border-b-2 border-[#152456] border-r px-2"
-                onClick={handleService}
-              >
-                Featured Services
-              </li>
+              <a ref={featured} href="" onClick={handleService}>
+                <li className="point border-b-2 border-[#152456] border-r px-2">
+                  Featured Services
+                </li>
+              </a>
+
               <li className="point border-[#152456] border-r px-2">
                 Healthcare Expertise
               </li>
@@ -314,6 +321,6 @@ function services() {
       </section>
     </div>
   );
-}
+};
 
 export default services;

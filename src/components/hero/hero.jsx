@@ -1,5 +1,5 @@
 import React from "react";
-import "./hero.css";
+import "./Hero.css";
 import img4 from "../../assets/img4.png";
 
 function hero() {
