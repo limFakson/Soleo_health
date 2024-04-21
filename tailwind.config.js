@@ -4,7 +4,8 @@ export default {
   theme: {
     extend: {
       fontFamily:{
-        Nunito: ['Nunito Sans']
+        Nunito: ['Nunito Sans'],
+        Oswald: ['Oswald']
       }
     },
   },

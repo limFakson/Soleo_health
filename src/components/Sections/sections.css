@@ -1,0 +1,21 @@
+.section_hr {
+  color: #152456;
+  border-top: solid 1px;
+}
+.point {
+  cursor: pointer;
+}
+.selector ul li:hover {
+  background-color: #e3efff;
+}
+.featured ol {
+  list-style: auto;
+  font-weight: 500;
+}
+.featured ul {
+  list-style: disc;
+  padding-left: 1.5rem;
+}
+.selectee {
+  overflow-y: scroll;
+}

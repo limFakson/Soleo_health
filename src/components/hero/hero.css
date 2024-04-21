@@ -1,7 +1,12 @@
-header{
-    background: linear-gradient(rgba(227, 239, 255, 0.782), rgba(227, 239, 255, 0.782)), url(../../assets/img-2.jpg);
-    background-repeat: no-repeat;
-    background-position: left;
-    background-size: cover;
-    height: 40rem;
+.options i{
+    font-size: 20px;
+    color: #152456;
+    margin: 0.5rem 0;
+}
+
+@media (min-width: 620px) {
+    .options i{
+        font-size: 30px;
+        color: #000;
+    }
 }
