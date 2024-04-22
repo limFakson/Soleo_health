@@ -1,11 +1,11 @@
-.options i{
+.options i {
     font-size: 20px;
     color: #152456;
     margin: 0.5rem 0;
 }
 
 @media (min-width: 620px) {
-    .options i{
+    .options i {
         font-size: 30px;
         color: #000;
     }

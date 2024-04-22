@@ -3,6 +3,10 @@
   border-top: solid 1px;
 }
 
+.point {
+  cursor: pointer;
+}
+
 .selector ul li:hover {
   background-color: #e3efff;
 }

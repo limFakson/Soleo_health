@@ -4,7 +4,7 @@ import viteLogo from "/vite.svg";
 import Hero from "./components/Hero/Hero.jsx";
 import Services from "./components/Sections/Service.jsx";
 import About from "./components/Sections/about.jsx";
-import Vacancy from "./components/Opportunity/Job.jsx";
+import Vacancy from "./components/Sections/Opportunity/Job.jsx";
 
 function App() {
   return (
