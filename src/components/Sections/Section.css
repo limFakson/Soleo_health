@@ -7,6 +7,10 @@
   background-color: #e3efff;
 }
 
+.selectee ul li:active {
+  background-color: #e3efff;
+}
+
 .selecteed ol {
   list-style: auto;
   font-weight: 500;
