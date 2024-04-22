@@ -41,8 +41,8 @@ const services = () => {
   };
 
   return (
-    <div className="mt-4">
-      <hr className="section_hr" />
+    <div className="py-4">
+    <hr className="section_hr" />
       <section id="services" className="my-8 sm:mx-8">
         <div className="service m-4">
           <h1 className="text-center text-4xl font-semibold font-[Oswald] text-[#152456]">
@@ -51,6 +51,7 @@ const services = () => {
         </div>
         <div className="services-selection sm:flex sm:gap-12 lg:ml-6 sm:h-[420px] lg:h-[22rem] ">
           <div className="selector sm:w-[28%] lg:w-[23%] sm:border-[#152456] py-4">
+            {/* Mobile Service List */}
             <ul className="mobile-selector flex sm:hidden border-b px-2 border-[#152456] ">
               <li
                 className={`point border-[#152456] border-r px-2 ${
@@ -93,6 +94,7 @@ const services = () => {
                 Wellness Tips
               </li>
             </ul>
+            {/* Tablet & Desktop Service List */}
             <ul className="larger-selector max-sm:hidden sm:block px-2 border-[#152456] ">
               <li
                 className={`point sm:px-2 lg:pl-6 py-6 sm:border-b border-[#152456] border-r-2 ${
