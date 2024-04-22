@@ -6,14 +6,17 @@
 .selector ul li:hover {
   background-color: #e3efff;
 }
+
 .selecteed ol {
   list-style: auto;
   font-weight: 500;
 }
+
 .selecteed ul {
   list-style: disc;
   padding-left: 1.5rem;
 }
+
 .about-goals {
   flex-wrap: wrap;
 }

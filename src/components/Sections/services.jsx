@@ -2,15 +2,8 @@ import React, { useRef, useState } from "react";
 import "./Section.css";
 
 const services = () => {
-  const featured = useRef();
-
-  if (featured.current) {
-    console.log("Click");
-  }
-
-  const handleService = () => {
-    console.log("clicked");
-    alert("Hi mom");
+  const ffClick = () => {
+    console.log("grains");
   };
 
   return (
@@ -25,27 +18,19 @@ const services = () => {
         <div className="services-selection sm:flex sm:gap-12 lg:ml-6 sm:h-[420px] lg:h-[22rem] ">
           <div className="selector sm:w-[28%] lg:w-[23%] sm:border-[#152456] py-4">
             <ul className="mobile-selector max-sm:flex sm:hidden border-b px-2 border-[#152456] ">
-              <a ref={featured} href="" onClick={handleService}>
-                <li className="point border-b-2 border-[#152456] border-r px-2">
-                  Featured Services
-                </li>
-              </a>
-
+              <li
+                className="point border-b-2 border-[#152456] border-r px-2"
+                onClick={ffClick}
+              >
+                Featured Services
+              </li>
               <li className="point border-[#152456] border-r px-2">
                 Healthcare Expertise
               </li>
-              <li
-                // ref={}
-                className="point border-[#152456] border-r px-2"
-              >
+              <li className="point border-[#152456] border-r px-2">
                 Patient-Centered Approach
               </li>
-              <li
-                // ref={}
-                className="point border-[#152456] "
-              >
-                Wellness Tips
-              </li>
+              <li className="point border-[#152456] ">Wellness Tips</li>
             </ul>
             <ul className="larger-selector max-sm:hidden sm:block px-2 border-[#152456] ">
               <li className="point sm:px-2 lg:pl-6 py-6 sm:border-b border-[#152456] border-r-4 ">
