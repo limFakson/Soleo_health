@@ -1,4 +1,5 @@
 import React, { useRef } from "react";
+import { Link } from "react-router-dom";
 import "./Hero.css";
 import "../Sections/Section.css";
 import img4 from "../../assets/img4.png";
@@ -29,27 +30,30 @@ function hero() {
           </div>
         </div>
         <div className="options bg-white sm:flex justify-center item-center rounded-3xl border-[#bddbff] border ">
-          <div className="about point border-[#152456] max-sm:border-b sm:border-r sm:w-[33.33%] text-center py-4 lg:px-8 sm:px-8 max-sm:px-8 ">
+          <a
+            href="#about-us"
+            className="about point border-[#152456] max-sm:border-b sm:border-r sm:w-[33.33%] text-center py-4 lg:px-8 sm:px-8 max-sm:px-8 "
+          >
             <i className="fa-solid fa-circle-exclamation"></i>
             <h2 className="font-bold text-xl">Learn More</h2>
             <p className="font-normal">
               Explore how we can support you on your wellness journey.
             </p>
-          </div>
-          <div className="services point border-[#152456] max-sm:border-y sm:border-x sm:w-[33.33%] text-center py-4 px-8 ">
+          </a>
+          <a href="#services" className="services point border-[#152456] max-sm:border-y sm:border-x sm:w-[33.33%] text-center py-4 px-8 ">
             <i className="fa-solid fa-stethoscope"></i>
             <h2 className="font-bold text-xl">Pharmacy Services</h2>
             <p className="font-normal">
               Discover a range of pharmacy services.
             </p>
-          </div>
-          <div className="opportunities point border-[#152456] max-sm:border-t sm:border-l sm:w-[33.33%] text-center py-4 px-8 ">
+          </a>
+          <a href="#recruit" className="opportunities point border-[#152456] max-sm:border-t sm:border-l sm:w-[33.33%] text-center py-4 px-8 ">
             <i className="fa-solid fa-user-doctor"></i>
             <h2 className="font-bold text-xl">Job Opportunities</h2>
             <p className="font-normal">
               Join Our Team! Explore Job Opportunities
             </p>
-          </div>
+          </a>
         </div>
       </header>
     </>
