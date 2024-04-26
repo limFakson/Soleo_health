@@ -3,13 +3,16 @@ import { Link } from "react-router-dom";
 import "./Hero.css";
 import "../Sections/Section.css";
 import img4 from "../../assets/img4.png";
+import logo from "../../assets/Soleo_Health_logo.png";
 
 function hero() {
   return (
     <>
-      <header className="w-full pt-4 bg-[#E3EFFF] mb-2">
-        <div className="nav">
-          <div className="logo"></div>
+      <header className="w-full pt-2 bg-[#E3EFFF] mb-2">
+        <div className="nav px-8 ">
+          <div className="logo w-[150px] ">
+            <img src={logo} alt="" className="w-full h-full" />
+          </div>
         </div>
         <div className="hero lg:flex justify-between items-center mt-[3rem] mx-12 max-sm:mx-8">
           <div className="pl-4 lg:w-[50%] sm:mr-[4rem] mr-4 mb-4 ">

@@ -59,3 +59,7 @@
     background-color: #fff;
   }
 }
+
+.button p:hover {
+  color: #fff;
+}
