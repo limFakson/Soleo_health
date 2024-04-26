@@ -40,14 +40,20 @@ function hero() {
               Explore how we can support you on your wellness journey.
             </p>
           </a>
-          <a href="#services" className="services point border-[#152456] max-sm:border-y sm:border-x sm:w-[33.33%] text-center py-4 px-8 ">
+          <a
+            href="#services"
+            className="services point border-[#152456] max-sm:border-y sm:border-x sm:w-[33.33%] text-center py-4 px-8 "
+          >
             <i className="fa-solid fa-stethoscope"></i>
             <h2 className="font-bold text-xl">Pharmacy Services</h2>
             <p className="font-normal">
               Discover a range of pharmacy services.
             </p>
           </a>
-          <a href="#recruit" className="opportunities point border-[#152456] max-sm:border-t sm:border-l sm:w-[33.33%] text-center py-4 px-8 ">
+          <a
+            href="#recruit"
+            className="opportunities point border-[#152456] max-sm:border-t sm:border-l sm:w-[33.33%] text-center py-4 px-8 "
+          >
             <i className="fa-solid fa-user-doctor"></i>
             <h2 className="font-bold text-xl">Job Opportunities</h2>
             <p className="font-normal">

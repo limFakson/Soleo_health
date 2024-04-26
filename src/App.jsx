@@ -5,7 +5,7 @@ import Hero from "./components/Hero/Homepage.jsx";
 import Services from "./components/Sections/Service.jsx";
 import About from "./components/Sections/about.jsx";
 import Vacancy from "./components/Sections/Opportunity/Job.jsx";
-import Show from "./components/Sections/Opportunity/show.jsx";
+import Testimonial from "./components/Sections/Opportunity/Testimonial.jsx";
 import Footer from "./components/Hero/Footer.jsx";
 
 function App() {
@@ -15,7 +15,7 @@ function App() {
       <About />
       <Services />
       <Vacancy />
-      {/* <Show /> */}
+      <Testimonial />
       <Footer />
     </>
   );
