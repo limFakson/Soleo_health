@@ -3,8 +3,8 @@ import "./Apply.css";
 
 function Apply() {
   return (
-    //Application receies request to make part or full time
-    // checked depending on what buttton clicked at home page
+    // {/* Application receies request to make part or full time
+    // checked depending on what buttton clicked at home page */}
     <div>
       <section
         id="application-page"
@@ -22,8 +22,8 @@ function Apply() {
                 </h3>
               </div>
               <div className="form px-8">
-                <form action="" method="post">
-                  <div className="personal-information py-4">
+                <form action="" method="post" className="form">
+                  <div className="personal-information py-4 flex flex-wrap justify-center ">
                     <input
                       type="text"
                       placeholder="Full name"

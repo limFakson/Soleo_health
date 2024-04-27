@@ -8,3 +8,19 @@
     height: 2.8rem;
     padding: 0 10px 0 1rem;
 }
+
+@media (min-width: 640px) {
+    .custom-input {
+        width: 16rem;
+        margin: 1rem 10px;
+    }
+}
+
+@media (min-width: 1024px) {
+    .custom-input {
+        justify-self: center;
+        width: 28rem;
+        height: 3.3rem;
+        margin: 1rem 1.3rem;
+    }
+}
