@@ -10,9 +10,11 @@ function hero() {
     <>
       <header className="w-full pt-2 bg-[#E3EFFF] mb-2">
         <div className="nav px-8 ">
-          <div className="logo w-[150px] ">
-            <img src={logo} alt="" className="w-full h-full" />
-          </div>
+          <Link to="/">
+            <div className="logo w-[150px] ">
+              <img src={logo} alt="" className="w-full h-full" />
+            </div>
+          </Link>
         </div>
         <div className="hero lg:flex justify-between items-center mt-[3rem] mx-12 max-sm:mx-8">
           <div className="pl-4 lg:w-[50%] sm:mr-[4rem] mr-4 mb-4 ">
