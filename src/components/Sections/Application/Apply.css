@@ -1,0 +1,10 @@
+.apply-container {
+    border-radius: 12px 12px 0 0;
+}
+
+.custom-input {
+    margin: 8px 0;
+    width: 18rem;
+    height: 2.8rem;
+    padding: 0 10px 0 1rem;
+}
