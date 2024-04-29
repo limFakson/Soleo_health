@@ -554,6 +554,10 @@ video {
   --tw-contain-style:  ;
 }
 
+.fixed {
+  position: fixed;
+}
+
 .absolute {
   position: absolute;
 }
@@ -904,6 +908,10 @@ video {
   background-color: #000003b9;
 }
 
+.bg-\[\#000003c0\] {
+  background-color: #000003c0;
+}
+
 .object-cover {
   -o-object-fit: cover;
      object-fit: cover;
@@ -1038,6 +1046,10 @@ video {
 
 .pb-1 {
   padding-bottom: 0.25rem;
+}
+
+.pt-\[6rem\] {
+  padding-top: 6rem;
 }
 
 .text-left {

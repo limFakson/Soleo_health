@@ -7,6 +7,15 @@
     width: 18rem;
     height: 2.8rem;
     padding: 0 10px 0 1rem;
+    color: #152456;
+}
+
+.custom-input:focus {
+    outline: none;
+}
+
+input[type=radio] {
+    cursor: pointer;
 }
 
 @media (min-width: 640px) {
