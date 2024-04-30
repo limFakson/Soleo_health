@@ -4,7 +4,7 @@
 
 .custom-input {
     margin: 8px 0;
-    width: 18rem;
+    width: 20rem;
     height: 2.8rem;
     padding: 0 10px 0 1rem;
     color: #152456;
@@ -21,7 +21,7 @@ input[type=radio] {
 @media (min-width: 640px) {
     .custom-input {
         width: 16rem;
-        margin: 1rem 10px;
+        margin: 10px;
     }
 }
 
@@ -30,6 +30,6 @@ input[type=radio] {
         justify-self: center;
         width: 24rem;
         height: 3.3rem;
-        margin: 1rem 1.3rem;
+        margin: 1rem;
     }
 }

@@ -18,9 +18,9 @@ function Apply() {
                   Start Your Journey with Us: Apply for Open Positions
                 </h3>
               </div>
-              <div className="form px-8">
+              <div className="form sm:px-4 lg:px-8">
                 <form action="" method="post" className="form">
-                  <div className="personal-information py-4 flex flex-wrap justify-center ">
+                  <div className="personal-information pt-4 pb-2 flex flex-wrap justify-center ">
                     <input
                       type="text"
                       placeholder="Full name"
@@ -64,44 +64,173 @@ function Apply() {
                       required
                     />
                   </div>
-                  <div className="information flex flex-wrap justify-center gap-4">
-                    <p className="hidden">
-                      How did you get your previous jobs? What were your main
-                      responsibilities? Achievements? Have you been in the
-                      military before? What type of jobs have you had? Are you
-                      willing to work flexible or long hours? Do you have a HP
-                      laserjet printer, copier and scanner? Are you seeking
-                      employment in a company of a certain size? What is your
-                      credit scores? How long do you intend working for this
-                      company ? Are you seeking a Full time or Part time
-                      Position? Whats your mobile phone carrier ? Do you operate
-                      with any financial institution Credit Card? Tell Us why
-                      you feel you are the right person for this Job? How would
-                      you like to be Paid ? Weekly Or Bi- Weekly / Direct
-                      deposit What bank do you operate with? Mobile Phone
-                      Carrier ( Postpaid / Prepaid )
-                    </p>
-                    <span>
-                      <p>Are you currently employed?</p>
-                      <input type="radio" name="Yes" id="" />
-                      <label htmlFor="yes">Yes</label>
-                      <input type="radio" name="no" id="" className="ml-2" />
-                      <label htmlFor="no">No</label>
-                    </span>
-                    <span>
-                      <p>Are you currently employed?</p>
-                      <input type="radio" name="Yes" id="" />
-                      <label htmlFor="yes">Yes</label>
-                      <input type="radio" name="no" id="" className="ml-2" />
-                      <label htmlFor="no">No</label>
-                    </span>
-                    <span>
-                      <p>Are you currently employed?</p>
-                      <input type="radio" name="Yes" id="" />
-                      <label htmlFor="yes">Yes</label>
-                      <input type="radio" name="no" id="" className="ml-2" />
-                      <label htmlFor="no">No</label>
-                    </span>
+                  <div className="information px-8 sm:flex item-center gap-4 ">
+                    <p className="hidden">What type of jobs have you had?</p>
+                    <div className="past-job sm:w-[50%]">
+                      <span>
+                        <p className="text-base pb-1">
+                          Are you currently employed?
+                        </p>
+                        <input type="radio" name="Yes" id="" className="mr-1" />
+                        <label htmlFor="yes">Yes</label>
+                        <input
+                          type="radio"
+                          name="no"
+                          id=""
+                          className="ml-2 mr-1"
+                        />
+                        <label htmlFor="no">No</label>
+                      </span>
+                      <span>
+                        <p className="text-base pb-1 pt-2">
+                          How did you get your previous or current job?
+                        </p>
+                        <textarea
+                          name="textarea"
+                          id=""
+                          cols="25"
+                          rows="2"
+                        ></textarea>
+                      </span>
+                      <span>
+                        <p className="text-base pb-1 pt-2">
+                          What were your main responsibilities and achievements?
+                        </p>
+                        <textarea name="" id="" cols="25" rows="2"></textarea>
+                      </span>
+                      <div className="pb-2">
+                        <p className="text-base pb-2">
+                          Have you been in the military before?
+                        </p>
+                        <input type="radio" name="Yes" id="" className="mr-1" />
+                        <label htmlFor="yes">Yes</label>
+                        <input
+                          type="radio"
+                          name="no"
+                          id=""
+                          className="ml-2 mr-1"
+                        />
+                        <label htmlFor="no">No</label>
+                      </div>
+                      <div className="pb-2">
+                        <p className="text-base pb-2">
+                          Do you operate with any financial institution Credit
+                          Card?
+                        </p>
+                        <input type="radio" name="Yes" id="" className="mr-1" />
+                        <label htmlFor="yes">Yes</label>
+                        <input
+                          type="radio"
+                          name="no"
+                          id=""
+                          className="ml-2 mr-1"
+                        />
+                        <label htmlFor="no">No</label>
+                      </div>
+                      <div className="pb-2">
+                        <p className="text-base pb-2">
+                          What is your credit scores?
+                        </p>
+                        <textarea
+                          name="textarea"
+                          id=""
+                          cols="25"
+                          rows="2"
+                        ></textarea>
+                      </div>
+                      <div className="pb-2">
+                        <p className="text-base pb-2">
+                          Whats your mobile phone carrier ?
+                        </p>
+                        <textarea
+                          name="textarea"
+                          id=""
+                          cols="25"
+                          rows="2"
+                        ></textarea>
+                      </div>
+                    </div>
+                    <div className="now-job sm:w-[50%]">
+                      <div className="pb-2">
+                        <p className="text-base pb-2">
+                          Are you seeking employment in a company of a certain
+                          size?
+                        </p>
+                        <input type="radio" name="Yes" id="" className="mr-1" />
+                        <label htmlFor="yes">Yes</label>
+                        <input
+                          type="radio"
+                          name="no"
+                          id=""
+                          className="ml-2 mr-1"
+                        />
+                        <label htmlFor="no">No</label>
+                      </div>
+                      <div className="pb-2">
+                        <p className="text-base pb-2">
+                          How long do you intend working for this company ?
+                        </p>
+                        <textarea
+                          name="textarea"
+                          id=""
+                          cols="30"
+                          rows="2"
+                        ></textarea>
+                      </div>
+                      <div className="pb-2">
+                        <p className="text-base pb-2">
+                          Are you willing to work Part time or Full time?
+                        </p>
+                        <input type="radio" name="Yes" id="" className="mr-1" />
+                        <label htmlFor="yes">Part time</label>
+                        <input
+                          type="radio"
+                          name="no"
+                          id=""
+                          className="ml-2 mr-1"
+                        />
+                        <label htmlFor="no">Full time</label>
+                      </div>
+                      <div className="pb-2">
+                        <p className="text-base pb-2">
+                          Do you have a HP laserjet printer, copier and scanner?
+                        </p>
+                        <input type="radio" name="Yes" id="" className="mr-1" />
+                        <label htmlFor="yes">Yes</label>
+                        <input
+                          type="radio"
+                          name="no"
+                          id=""
+                          className="ml-2 mr-1"
+                        />
+                        <label htmlFor="no">No</label>
+                      </div>
+                      <div className="pb-2">
+                        <p className="text-base pb-2">
+                          Tell Us why you feel you are the right person for this
+                          Job?
+                        </p>
+                        <textarea
+                          name="textarea"
+                          id=""
+                          cols="30"
+                          rows="2"
+                        ></textarea>
+                      </div>
+                      <div className="pb-2">
+                        <p className="text-base pb-2">
+                          How would you like to be Paid ? Weekly Or Bi- Weekly /
+                          Direct deposit What bank do you operate with? Mobile
+                          Phone Carrier ( Postpaid / Prepaid )
+                        </p>
+                        <textarea
+                          name="textarea"
+                          id=""
+                          cols="30"
+                          rows="2"
+                        ></textarea>
+                      </div>
+                    </div>
                   </div>
                   <div className="cards"></div>
                   <button
