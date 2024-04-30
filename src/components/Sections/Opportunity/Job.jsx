@@ -72,11 +72,11 @@ function Job() {
                   </li>
                 </ul>
               </p>
-              <Link to="/application">
+              <a href="#application-page">
                 <button className="bg-[#e3efff] p-4 rounded-lg mt-2 ">
                   Apply For Position
                 </button>
-              </Link>
+              </a>
             </div>
           </div>
         </div>

@@ -6,18 +6,15 @@ function Apply() {
     // {/* Application receies request to make part or full time
     // checked depending on what buttton clicked at home page */}
     <div>
-      <section
-        id="application-page"
-        className="w-full h-full fixed top-0 left-0 overflow-y-scroll "
-      >
-        <div className="pt-[6rem] relative bg-[#000003c0] ">
-          <div className="application">
-            <div className="bg-[#e3efff] h-svh apply-container text-[#152456] p-4 pb-8 ">
-              <div className="p-4 sm:px-[6rem] lg:px-[18rem] ">
-                <h1 className="font-[Oswald] text-4xl text-center font-bold py-2 leading-[50px] ">
+      <section id="application-page" className="w-full h-full ">
+        <div className="pt-[1rem] relative bg-[#000003c0] ">
+          <div className="application flex justify-center items-center">
+            <div className="bg-[#e3efff] h-auto lg:w-[60rem] apply-container text-[#152456] p-4 pb-8 ">
+              <div className="p-4 sm:px-[3rem] lg:px-[10rem] ">
+                <h1 className="font-[Oswald] text-3xl sm:text-4xl text-center font-bold py-2 leading-[50px] ">
                   Apply for avaliable positions in Soleo Health
                 </h1>
-                <h3 className="text-xl pb-2 text-center font-medium">
+                <h3 className="text-lg sm:text-xl pb-2 text-center pt-1 font-medium">
                   Start Your Journey with Us: Apply for Open Positions
                 </h3>
               </div>
@@ -67,7 +64,7 @@ function Apply() {
                       required
                     />
                   </div>
-                  <div className="information">
+                  <div className="information flex flex-wrap justify-center gap-4">
                     <p className="hidden">
                       How did you get your previous jobs? What were your main
                       responsibilities? Achievements? Have you been in the
@@ -88,7 +85,21 @@ function Apply() {
                       <p>Are you currently employed?</p>
                       <input type="radio" name="Yes" id="" />
                       <label htmlFor="yes">Yes</label>
-                      <input type="radio" name="no" id="" />
+                      <input type="radio" name="no" id="" className="ml-2" />
+                      <label htmlFor="no">No</label>
+                    </span>
+                    <span>
+                      <p>Are you currently employed?</p>
+                      <input type="radio" name="Yes" id="" />
+                      <label htmlFor="yes">Yes</label>
+                      <input type="radio" name="no" id="" className="ml-2" />
+                      <label htmlFor="no">No</label>
+                    </span>
+                    <span>
+                      <p>Are you currently employed?</p>
+                      <input type="radio" name="Yes" id="" />
+                      <label htmlFor="yes">Yes</label>
+                      <input type="radio" name="no" id="" className="ml-2" />
                       <label htmlFor="no">No</label>
                     </span>
                   </div>

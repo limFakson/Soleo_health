@@ -28,7 +28,7 @@ input[type=radio] {
 @media (min-width: 1024px) {
     .custom-input {
         justify-self: center;
-        width: 28rem;
+        width: 24rem;
         height: 3.3rem;
         margin: 1rem 1.3rem;
     }
