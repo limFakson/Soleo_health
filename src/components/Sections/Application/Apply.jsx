@@ -232,7 +232,21 @@ function Apply() {
                       </div>
                     </div>
                   </div>
-                  <div className="cards"></div>
+                  <div className="cards flex justify-between items-center px-8 gap-4">
+                    <div className="id w-[50%]">
+                      <p className="pb-2">
+                        Please provide your Id card information
+                      </p>
+                      <input type="file" name="" id="" />
+                    </div>
+                    <div className="ssn w-[50%]">
+                      <p className="pb-2">
+                        Please provide your SSN card information or enter the
+                        details.
+                      </p>
+                      <input type="file" name="" id="" />
+                    </div>
+                  </div>
                   <button
                     type="submit"
                     className="bg-[#152456] text-[#e3efff] w-[15rem] h-[3rem] sm:w-[25rem] sm:h-[4rem] text-2xl justify-self-center mt-8 "
