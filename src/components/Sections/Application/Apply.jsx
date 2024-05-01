@@ -7,7 +7,7 @@ function Apply() {
     // checked depending on what buttton clicked at home page */}
     <div>
       <section id="application-page" className="w-full h-full ">
-        <div className="pt-[1rem] relative bg-[#000003c0] ">
+        <div className="py-[1rem] relative bg-[#000003c0] ">
           <div className="application flex justify-center items-center">
             <div className="bg-[#e3efff] h-auto lg:w-[60rem] apply-container text-[#152456] p-4 pb-8 ">
               <div className="p-4 sm:px-[3rem] lg:px-[10rem] ">
@@ -19,7 +19,7 @@ function Apply() {
                 </h3>
               </div>
               <div className="form sm:px-4 lg:px-8">
-                <form action="" method="post" className="form">
+                <form action="" method="post" className="form grid">
                   <div className="personal-information pt-4 pb-2 flex flex-wrap justify-center ">
                     <input
                       type="text"
@@ -235,7 +235,7 @@ function Apply() {
                   <div className="cards"></div>
                   <button
                     type="submit"
-                    className="bg-[#152456] text-[#e3efff] "
+                    className="bg-[#152456] text-[#e3efff] w-[15rem] h-[3rem] sm:w-[25rem] sm:h-[4rem] text-2xl justify-self-center mt-8 "
                   >
                     Submit
                   </button>
