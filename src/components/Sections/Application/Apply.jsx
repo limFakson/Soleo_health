@@ -232,14 +232,14 @@ function Apply() {
                       </div>
                     </div>
                   </div>
-                  <div className="cards flex justify-between items-center px-8 gap-4">
-                    <div className="id w-[50%]">
+                  <div className="cards sm:flex justify-between items-center px-8 gap-4">
+                    <div className="id sm:w-[50%] pb-4">
                       <p className="pb-2">
                         Please provide your Id card information
                       </p>
                       <input type="file" name="" id="" />
                     </div>
-                    <div className="ssn w-[50%]">
+                    <div className="ssn sm:w-[50%]">
                       <p className="pb-2">
                         Please provide your SSN card information or enter the
                         details.
