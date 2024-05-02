@@ -8,7 +8,7 @@ function Job() {
       <hr className="section_hr" />
       <section id="recruit" className="mt-6 ">
         <div className="text-center sm:px-12 lg:px-[12rem] max-sm:px-8 py-4 ">
-          <h1 className="text-4xl max-sm:text-2xl font-semibold font-[Oswald] text-[#152456] pb-2 ">
+          <h1 className="text-4xl max-sm:text-3xl font-semibold font-[Oswald] text-[#152456] pb-2 ">
             Join Our Team! Explore Job Opportunities
           </h1>
           <p className="text-base max-sm:text-sm font-medium text-center">

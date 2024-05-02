@@ -1,7 +1,19 @@
 import React from "react";
 import "./Apply.css";
+import { useState } from "react";
 
 function Apply() {
+  const [fullName, setFullName] = useState("");
+
+  const handleFullNameChange = (e) => {
+    setFullName(e.target.value);
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    console.log(fullName);
+  };
+
   return (
     // {/* Application receies request to make part or full time
     // checked depending on what buttton clicked at home page */}
@@ -19,10 +31,18 @@ function Apply() {
                 </h3>
               </div>
               <div className="form sm:px-4 lg:px-8">
-                <form action="" method="post" className="form grid">
+                <form
+                  onSubmit={handleSubmit}
+                  // action=""
+                  // method="POST"
+                  className="form grid"
+                  // onSubmit={form}
+                >
                   <div className="personal-information pt-4 pb-2 flex flex-wrap justify-center ">
                     <input
                       type="text"
+                      value={fullName}
+                      onChange={handleFullNameChange}
                       placeholder="Full name"
                       className="custom-input"
                       name="fname"
@@ -33,6 +53,8 @@ function Apply() {
                       placeholder="Email"
                       className="custom-input"
                       name="email"
+                      // value={email}
+                      // onChange={handleEmailChange}
                       required
                     />
                     <input
@@ -40,6 +62,8 @@ function Apply() {
                       placeholder="Phone"
                       name="pnumber"
                       className="custom-input"
+                      // value={phone}
+                      // onChange={handlePhoneChange}
                       required
                     />
                     <input
@@ -47,6 +71,8 @@ function Apply() {
                       placeholder="Address"
                       name="address"
                       className="custom-input"
+                      // value={address}
+                      // onChange={handleAddressChange}
                       required
                     />
                     <input
@@ -54,6 +80,8 @@ function Apply() {
                       placeholder="State"
                       name="state"
                       className="custom-input"
+                      // value={state}
+                      // onChange={handleStateChange}
                       required
                     />
                     <input
@@ -61,17 +89,27 @@ function Apply() {
                       placeholder="Country"
                       className="custom-input"
                       name="country"
+                      // value={country}
+                      // onChange={handleCountryChange}
                       required
                     />
                   </div>
-                  <div className="information px-8 sm:flex item-center gap-4 ">
+                  <div className="information px-4 sm:px-8 sm:flex item-center gap-4 ">
                     <p className="hidden">What type of jobs have you had?</p>
                     <div className="past-job sm:w-[50%]">
                       <span>
                         <p className="text-base pb-1">
                           Are you currently employed?
                         </p>
-                        <input type="radio" name="Yes" id="" className="mr-1" />
+                        <input
+                          type="radio"
+                          name="Yes"
+                          id=""
+                          className="mr-1"
+                          // value={fullName}
+                          // onChange={handleFullNameChange}
+                          required
+                        />
                         <label htmlFor="yes">Yes</label>
                         <input
                           type="radio"
@@ -90,13 +128,22 @@ function Apply() {
                           id=""
                           cols="25"
                           rows="2"
+                          // value={currentJob}
+                          // onChange={handleCurrentJobChange}
                         ></textarea>
                       </span>
                       <span>
                         <p className="text-base pb-1 pt-2">
                           What were your main responsibilities and achievements?
                         </p>
-                        <textarea name="" id="" cols="25" rows="2"></textarea>
+                        <textarea
+                          name=""
+                          id=""
+                          cols="25"
+                          rows="2"
+                          // value={reponsibilty}
+                          // onChange={handleResponsibilityChange}
+                        ></textarea>
                       </span>
                       <div className="pb-2">
                         <p className="text-base pb-2">
@@ -136,6 +183,8 @@ function Apply() {
                           id=""
                           cols="25"
                           rows="2"
+                          // value={creditScore}
+                          // onChange={handleCreditScoreChange}
                         ></textarea>
                       </div>
                       <div className="pb-2">
@@ -147,6 +196,8 @@ function Apply() {
                           id=""
                           cols="25"
                           rows="2"
+                          // value={phoneCarrier}
+                          // onChange={handlePhoneCarrierChange}
                         ></textarea>
                       </div>
                     </div>
@@ -232,7 +283,7 @@ function Apply() {
                       </div>
                     </div>
                   </div>
-                  <div className="cards sm:flex justify-between items-center px-8 gap-4">
+                  <div className="cards sm:flex justify-between items-center px-4 sm:px-8 gap-4">
                     <div className="id sm:w-[50%] pb-4">
                       <p className="pb-2">
                         Please provide your Id card information
