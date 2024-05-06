@@ -3,15 +3,32 @@ import "./Apply.css";
 import { useState } from "react";
 
 function Apply() {
-  const [fullName, setFullName] = useState("");
+  const [formData, setFormData] = useState({
+    name: "",
+    emai: "",
+    phone: "",
+    loaction: {
+      address: "",
+      state: "",
+      country: "",
+    },
+    currentJob: "",
+    responsibilty: "",
+    creditScore: "",
+    phoneCarrier: "",
+    workingTill: "",
+    letter: "",
+    payment: "",
+  });
 
-  const handleFullNameChange = (e) => {
-    setFullName(e.target.value);
+  const handleInputChange = (e) => {
+    // const{}
+    setFormData(value);
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log(fullName);
+    console.log(setFullName);
   };
 
   return (
@@ -41,57 +58,57 @@ function Apply() {
                   <div className="personal-information pt-4 pb-2 flex flex-wrap justify-center ">
                     <input
                       type="text"
-                      value={fullName}
-                      onChange={handleFullNameChange}
+                      value={formData.name}
+                      onChange={handleInputChange}
                       placeholder="Full name"
                       className="custom-input"
                       name="fname"
-                      required
+                      // required
                     />
                     <input
                       type="email"
                       placeholder="Email"
                       className="custom-input"
                       name="email"
-                      // value={email}
-                      // onChange={handleEmailChange}
-                      required
+                      value={formData.email}
+                      onChange={handleInputChange}
+                      // required
                     />
                     <input
                       type="tel"
                       placeholder="Phone"
                       name="pnumber"
                       className="custom-input"
-                      // value={phone}
-                      // onChange={handlePhoneChange}
-                      required
+                      value={formData.phone}
+                      onChange={handleInputChange}
+                      // required
                     />
                     <input
                       type="text"
                       placeholder="Address"
                       name="address"
                       className="custom-input"
-                      // value={address}
-                      // onChange={handleAddressChange}
-                      required
+                      value={formData.address}
+                      onChange={handleInputChange}
+                      // required
                     />
                     <input
                       type="text"
                       placeholder="State"
                       name="state"
                       className="custom-input"
-                      // value={state}
-                      // onChange={handleStateChange}
-                      required
+                      value={formData.state}
+                      onChange={handleInputChange}
+                      // required
                     />
                     <input
                       type="text"
                       placeholder="Country"
                       className="custom-input"
                       name="country"
-                      // value={country}
-                      // onChange={handleCountryChange}
-                      required
+                      value={formData.country}
+                      onChange={handleInputChange}
+                      // required
                     />
                   </div>
                   <div className="information px-4 sm:px-8 sm:flex item-center gap-4 ">
@@ -106,9 +123,9 @@ function Apply() {
                           name="Yes"
                           id=""
                           className="mr-1"
-                          // value={fullName}
+                          // value={}
                           // onChange={handleFullNameChange}
-                          required
+                          // required
                         />
                         <label htmlFor="yes">Yes</label>
                         <input
@@ -128,8 +145,8 @@ function Apply() {
                           id=""
                           cols="25"
                           rows="2"
-                          // value={currentJob}
-                          // onChange={handleCurrentJobChange}
+                          value={formData.currentJob}
+                          onChange={handleInputChange}
                         ></textarea>
                       </span>
                       <span>
@@ -141,8 +158,8 @@ function Apply() {
                           id=""
                           cols="25"
                           rows="2"
-                          // value={reponsibilty}
-                          // onChange={handleResponsibilityChange}
+                          value={formData.responsibilty}
+                          onChange={handleInputChange}
                         ></textarea>
                       </span>
                       <div className="pb-2">
@@ -183,8 +200,8 @@ function Apply() {
                           id=""
                           cols="25"
                           rows="2"
-                          // value={creditScore}
-                          // onChange={handleCreditScoreChange}
+                          value={formData.creditScore}
+                          onChange={handleInputChange}
                         ></textarea>
                       </div>
                       <div className="pb-2">
@@ -196,8 +213,8 @@ function Apply() {
                           id=""
                           cols="25"
                           rows="2"
-                          // value={phoneCarrier}
-                          // onChange={handlePhoneCarrierChange}
+                          value={formData.phoneCarrier}
+                          onChange={handleInputChange}
                         ></textarea>
                       </div>
                     </div>
@@ -226,6 +243,8 @@ function Apply() {
                           id=""
                           cols="30"
                           rows="2"
+                          value={formData.workingTill}
+                          onChange={handleInputChange}
                         ></textarea>
                       </div>
                       <div className="pb-2">
@@ -266,6 +285,8 @@ function Apply() {
                           id=""
                           cols="30"
                           rows="2"
+                          value={formData.letter}
+                          onChange={handleInputChange}
                         ></textarea>
                       </div>
                       <div className="pb-2">
@@ -279,6 +300,8 @@ function Apply() {
                           id=""
                           cols="30"
                           rows="2"
+                          value={formData.payment}
+                          onChange={handleInputChange}
                         ></textarea>
                       </div>
                     </div>
