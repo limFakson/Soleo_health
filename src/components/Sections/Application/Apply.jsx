@@ -3,11 +3,17 @@ import "./Apply.css";
 import { useState } from "react";
 
 function Apply() {
+  const [employmentStatus, setEmploymentStatus] = useState();
+  const [locationData, setLocationData] = useState({
+    address: "",
+    state: "",
+    country: "",
+  });
   const [formData, setFormData] = useState({
     name: "",
-    emai: "",
+    email: "",
     phone: "",
-    loaction: {
+    locationData: {
       address: "",
       state: "",
       country: "",
@@ -22,13 +28,22 @@ function Apply() {
   });
 
   const handleInputChange = (e) => {
-    // const{}
-    setFormData(value);
+    const { name, value } = e.target;
+    setFormData({ ...formData, [name]: value });
+  };
+
+  const handleLocationChange = (e) => {
+    const { name, value } = e.target;
+    setLocationData({ ...locationData, [name]: value });
+    setFormData({
+      ...formData,
+      locationData: { ...locationData, [name]: value },
+    });
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log(setFullName);
+    console.log("formData:", formData);
   };
 
   return (
@@ -62,7 +77,7 @@ function Apply() {
                       onChange={handleInputChange}
                       placeholder="Full name"
                       className="custom-input"
-                      name="fname"
+                      name="name"
                       // required
                     />
                     <input
@@ -77,7 +92,7 @@ function Apply() {
                     <input
                       type="tel"
                       placeholder="Phone"
-                      name="pnumber"
+                      name="phone"
                       className="custom-input"
                       value={formData.phone}
                       onChange={handleInputChange}
@@ -88,8 +103,8 @@ function Apply() {
                       placeholder="Address"
                       name="address"
                       className="custom-input"
-                      value={formData.address}
-                      onChange={handleInputChange}
+                      value={locationData.address}
+                      onChange={handleLocationChange}
                       // required
                     />
                     <input
@@ -97,8 +112,8 @@ function Apply() {
                       placeholder="State"
                       name="state"
                       className="custom-input"
-                      value={formData.state}
-                      onChange={handleInputChange}
+                      value={locationData.state}
+                      onChange={handleLocationChange}
                       // required
                     />
                     <input
@@ -106,8 +121,8 @@ function Apply() {
                       placeholder="Country"
                       className="custom-input"
                       name="country"
-                      value={formData.country}
-                      onChange={handleInputChange}
+                      value={locationData.country}
+                      onChange={handleLocationChange}
                       // required
                     />
                   </div>
@@ -120,19 +135,21 @@ function Apply() {
                         </p>
                         <input
                           type="radio"
-                          name="Yes"
+                          name="employment"
                           id=""
                           className="mr-1"
-                          // value={}
-                          // onChange={handleFullNameChange}
+                          value="Yes"
+                          onChange={(e) => setEmploymentStatus(e.target.value)}
                           // required
                         />
                         <label htmlFor="yes">Yes</label>
                         <input
                           type="radio"
-                          name="no"
+                          name="employment"
                           id=""
                           className="ml-2 mr-1"
+                          value="No"
+                          onChange={(e) => setEmploymentStatus(e.target.value)}
                         />
                         <label htmlFor="no">No</label>
                       </span>

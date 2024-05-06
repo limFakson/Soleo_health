@@ -5,17 +5,15 @@ import About from "../Sections/about";
 import Vacancy from "../Sections/Opportunity/Job";
 import Footer from "../Hero/Footer";
 import Apply from "../Sections/Application/Apply";
-import MyForm from "../Hero/teachJoshua";
 
 function Home() {
   return (
     <>
-      <MyForm />
       <Hero />
       <About />
       <Services />
       <Vacancy />
-      {/* <Apply /> */}
+      <Apply />
       <Footer />
     </>
   );
