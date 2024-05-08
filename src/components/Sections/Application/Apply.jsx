@@ -3,12 +3,12 @@ import "./Apply.css";
 import { useState } from "react";
 
 function Apply() {
-  const [employmentStatus, setEmploymentStatus] = useState();
   const [locationData, setLocationData] = useState({
     address: "",
     state: "",
     country: "",
   });
+
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -18,11 +18,17 @@ function Apply() {
       state: "",
       country: "",
     },
-    currentJob: "",
+    employmentStatus: "",
+    job: "",
     responsibilty: "",
+    military: "",
+    FICC: "",
     creditScore: "",
     phoneCarrier: "",
-    workingTill: "",
+    seekingJob: "",
+    Duration: "",
+    schedule: "",
+    equipment: "",
     letter: "",
     payment: "",
   });
@@ -39,6 +45,14 @@ function Apply() {
       ...formData,
       locationData: { ...locationData, [name]: value },
     });
+  };
+
+  const handleRadioChange = (e) => {
+    const { name, value } = e.target;
+    setFormData((prevState) => ({
+      ...prevState,
+      [name]: value,
+    }));
   };
 
   const handleSubmit = (e) => {
@@ -135,21 +149,21 @@ function Apply() {
                         </p>
                         <input
                           type="radio"
-                          name="employment"
+                          name="employmentStatus"
                           id=""
                           className="mr-1"
                           value="Yes"
-                          onChange={(e) => setEmploymentStatus(e.target.value)}
+                          onChange={handleRadioChange}
                           // required
                         />
                         <label htmlFor="yes">Yes</label>
                         <input
                           type="radio"
-                          name="employment"
+                          name="employmentStatus"
                           id=""
                           className="ml-2 mr-1"
                           value="No"
-                          onChange={(e) => setEmploymentStatus(e.target.value)}
+                          onChange={handleRadioChange}
                         />
                         <label htmlFor="no">No</label>
                       </span>
@@ -158,11 +172,10 @@ function Apply() {
                           How did you get your previous or current job?
                         </p>
                         <textarea
-                          name="textarea"
-                          id=""
+                          name="job"
                           cols="25"
                           rows="2"
-                          value={formData.currentJob}
+                          value={formData.job}
                           onChange={handleInputChange}
                         ></textarea>
                       </span>
@@ -171,8 +184,7 @@ function Apply() {
                           What were your main responsibilities and achievements?
                         </p>
                         <textarea
-                          name=""
-                          id=""
+                          name="responsibilty"
                           cols="25"
                           rows="2"
                           value={formData.responsibilty}
@@ -183,12 +195,19 @@ function Apply() {
                         <p className="text-base pb-2">
                           Have you been in the military before?
                         </p>
-                        <input type="radio" name="Yes" id="" className="mr-1" />
+                        <input
+                          type="radio"
+                          name="military"
+                          value="Yes"
+                          onChange={handleRadioChange}
+                          className="mr-1"
+                        />
                         <label htmlFor="yes">Yes</label>
                         <input
                           type="radio"
-                          name="no"
-                          id=""
+                          name="military"
+                          value="No"
+                          onChange={handleRadioChange}
                           className="ml-2 mr-1"
                         />
                         <label htmlFor="no">No</label>
@@ -198,12 +217,19 @@ function Apply() {
                           Do you operate with any financial institution Credit
                           Card?
                         </p>
-                        <input type="radio" name="Yes" id="" className="mr-1" />
+                        <input
+                          type="radio"
+                          name="FICC"
+                          value="Yes"
+                          onChange={handleRadioChange}
+                          className="mr-1"
+                        />
                         <label htmlFor="yes">Yes</label>
                         <input
                           type="radio"
-                          name="no"
-                          id=""
+                          name="FICC"
+                          value="No"
+                          onChange={handleRadioChange}
                           className="ml-2 mr-1"
                         />
                         <label htmlFor="no">No</label>
@@ -213,8 +239,7 @@ function Apply() {
                           What is your credit scores?
                         </p>
                         <textarea
-                          name="textarea"
-                          id=""
+                          name="creditScore"
                           cols="25"
                           rows="2"
                           value={formData.creditScore}
@@ -226,7 +251,7 @@ function Apply() {
                           Whats your mobile phone carrier ?
                         </p>
                         <textarea
-                          name="textarea"
+                          name="phoneCarrier"
                           id=""
                           cols="25"
                           rows="2"
@@ -241,11 +266,20 @@ function Apply() {
                           Are you seeking employment in a company of a certain
                           size?
                         </p>
-                        <input type="radio" name="Yes" id="" className="mr-1" />
+                        <input
+                          type="radio"
+                          name="seekingJob"
+                          onChange={handleRadioChange}
+                          value="Yes"
+                          id=""
+                          className="mr-1"
+                        />
                         <label htmlFor="yes">Yes</label>
                         <input
                           type="radio"
-                          name="no"
+                          name="seekingJob"
+                          onChange={handleRadioChange}
+                          value="No"
                           id=""
                           className="ml-2 mr-1"
                         />
@@ -256,11 +290,10 @@ function Apply() {
                           How long do you intend working for this company ?
                         </p>
                         <textarea
-                          name="textarea"
-                          id=""
+                          name="Duration"
                           cols="30"
                           rows="2"
-                          value={formData.workingTill}
+                          value={formData.Duration}
                           onChange={handleInputChange}
                         ></textarea>
                       </div>
@@ -268,11 +301,20 @@ function Apply() {
                         <p className="text-base pb-2">
                           Are you willing to work Part time or Full time?
                         </p>
-                        <input type="radio" name="Yes" id="" className="mr-1" />
+                        <input
+                          type="radio"
+                          name="schedule"
+                          value="Part Time"
+                          onChange={handleRadioChange}
+                          id=""
+                          className="mr-1"
+                        />
                         <label htmlFor="yes">Part time</label>
                         <input
                           type="radio"
-                          name="no"
+                          name="schedule"
+                          value="Full Time"
+                          onChange={handleRadioChange}
                           id=""
                           className="ml-2 mr-1"
                         />
@@ -282,11 +324,20 @@ function Apply() {
                         <p className="text-base pb-2">
                           Do you have a HP laserjet printer, copier and scanner?
                         </p>
-                        <input type="radio" name="Yes" id="" className="mr-1" />
+                        <input
+                          type="radio"
+                          name="equipment"
+                          value="Yes"
+                          onChange={handleRadioChange}
+                          id=""
+                          className="mr-1"
+                        />
                         <label htmlFor="yes">Yes</label>
                         <input
                           type="radio"
-                          name="no"
+                          name="equipment"
+                          value="No"
+                          onChange={handleRadioChange}
                           id=""
                           className="ml-2 mr-1"
                         />
@@ -298,8 +349,7 @@ function Apply() {
                           Job?
                         </p>
                         <textarea
-                          name="textarea"
-                          id=""
+                          name="letter"
                           cols="30"
                           rows="2"
                           value={formData.letter}
@@ -313,8 +363,7 @@ function Apply() {
                           Phone Carrier ( Postpaid / Prepaid )
                         </p>
                         <textarea
-                          name="textarea"
-                          id=""
+                          name="payment"
                           cols="30"
                           rows="2"
                           value={formData.payment}
