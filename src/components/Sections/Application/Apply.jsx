@@ -1,9 +1,11 @@
 import React from "react";
 import "./Apply.css";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { handleSubmit } from "./formUtils";
 
 function Apply() {
+  const apiUrl = import.meta.env.API_LINK;
+  console.log(import.meta.env.VITE_ENV_GUT);
   const [locationData, setLocationData] = useState({
     address: "",
     state: "",
@@ -48,6 +50,23 @@ function Apply() {
     });
   };
 
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const response = await fetch("http://localhost:8000/api/");
+        if (!response.ok) {
+          throw new Error(`HTTP error! status: ${response.status}`);
+        }
+        const data = await response.json();
+        console.log(data);
+      } catch (error) {
+        console.error("Error fetching data:", error);
+      }
+    };
+
+    fetchData();
+  });
+
   const handleRadioChange = (e) => {
     const { name, value } = e.target;
     setFormData((prevState) => ({
@@ -55,12 +74,6 @@ function Apply() {
       [name]: value,
     }));
   };
-
-  // const handleSubmit = (e) => {
-  //   e.preventDefault();
-  //   console.log("formData:", formData);
-  //   // window.location.reload();
-  // };
 
   return (
     // {/* Application receies request to make part or full time

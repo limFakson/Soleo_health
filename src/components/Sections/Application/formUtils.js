@@ -3,4 +3,5 @@ export const handleSubmit = (e, formData) => {
   console.log("formData:", formData);
   // Add your form submission logic here
   // For example, sending the form data to a server
+  //   // window.location.reload();
 };
