@@ -1,6 +1,7 @@
 import React from "react";
 import "./Apply.css";
 import { useState } from "react";
+import { handleSubmit } from "./formUtils";
 
 function Apply() {
   const [locationData, setLocationData] = useState({
@@ -55,10 +56,11 @@ function Apply() {
     }));
   };
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    console.log("formData:", formData);
-  };
+  // const handleSubmit = (e) => {
+  //   e.preventDefault();
+  //   console.log("formData:", formData);
+  //   // window.location.reload();
+  // };
 
   return (
     // {/* Application receies request to make part or full time
@@ -78,7 +80,7 @@ function Apply() {
               </div>
               <div className="form sm:px-4 lg:px-8">
                 <form
-                  onSubmit={handleSubmit}
+                  onSubmit={(e) => handleSubmit(e, formData)}
                   // action=""
                   // method="POST"
                   className="form grid"
