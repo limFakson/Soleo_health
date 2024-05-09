@@ -1,10 +1,10 @@
 import React from "react";
 import Footer from "../Hero/Footer";
-import Login from "../Sections/Dashboard/login";
+import Display from "../Sections/Dashboard/Display";
 function Application() {
   return (
     <>
-      <Login />
+      <Display />
       <Footer />
     </>
   );
