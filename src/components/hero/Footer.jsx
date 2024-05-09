@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import logo from "../../assets/Soleo_Health_logo.png";
-import "../Sections/Section.css";
+import "../Sections/Menu/Section.css";
 
 function Footer() {
   return (

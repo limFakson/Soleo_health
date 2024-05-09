@@ -1,6 +1,6 @@
 import React from "react";
 import "./Section.css";
-import img5 from "../../assets/img-5.png";
+import img5 from "../../../assets/img-5.png";
 
 function about() {
   return (

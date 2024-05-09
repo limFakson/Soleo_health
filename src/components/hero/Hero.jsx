@@ -1,7 +1,7 @@
 import React, { useRef } from "react";
 import { Link } from "react-router-dom";
 import "./Hero.css";
-import "../Sections/Section.css";
+import "../Sections/Menu/Section.css";
 import img4 from "../../assets/img4.png";
 import logo from "../../assets/Soleo_Health_logo.png";
 
