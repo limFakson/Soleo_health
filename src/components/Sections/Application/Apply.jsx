@@ -1,11 +1,9 @@
 import React from "react";
 import "./Apply.css";
 import { useEffect, useState } from "react";
-import { handleSubmit } from "./formUtils";
 
 function Apply() {
-  const apiUrl = import.meta.env.API_LINK;
-  console.log(import.meta.env.VITE_ENV_GUT);
+  const apiUrl = import.meta.env.VITE_API_LINK;
   const [locationData, setLocationData] = useState({
     address: "",
     state: "",
@@ -50,15 +48,22 @@ function Apply() {
     });
   };
 
+  const handleRadioChange = (e) => {
+    const { name, value } = e.target;
+    setFormData((prevState) => ({
+      ...prevState,
+      [name]: value,
+    }));
+  };
+
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch("http://localhost:8000/api/");
+        const response = await fetch(apiUrl);
         if (!response.ok) {
           throw new Error(`HTTP error! status: ${response.status}`);
         }
         const data = await response.json();
-        console.log(data);
       } catch (error) {
         console.error("Error fetching data:", error);
       }
@@ -66,13 +71,33 @@ function Apply() {
 
     fetchData();
   });
-
-  const handleRadioChange = (e) => {
-    const { name, value } = e.target;
-    setFormData((prevState) => ({
-      ...prevState,
-      [name]: value,
-    }));
+  const createData = async (formData) => {
+    try {
+      const response = await fetch(apiUrl, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ data: formData }),
+      });
+      if (!response.ok) {
+        throw new Error(`HTTP error! status: ${response.status}`);
+      }
+      const responseData = await response.json();
+      return responseData;
+    } catch (error) {
+      console.error("Error fetching data:", error);
+      throw error;
+    }
+  };
+  const handleSubmit = (e, formData) => {
+    e.preventDefault();
+    console.log("formData:", formData);
+    console.log();
+    createData(formData);
+    // Add your form submission logic here
+    // For example, sending the form data to a server
+    window.location.reload();
   };
 
   return (
