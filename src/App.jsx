@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Home from "./components/Pages/Home";
-import Details from "./components/Pages/FormDetails";
+import Admin from "./components/Pages/Admin";
 
 function App() {
   return (
@@ -9,7 +9,7 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/application" element={<Details />} />
+          <Route path="/admin/dashboard/passby" element={<Admin />} />
         </Routes>
       </BrowserRouter>
     </>

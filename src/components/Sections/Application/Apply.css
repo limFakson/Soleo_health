@@ -19,6 +19,11 @@ textarea:focus {
     padding: 5px 10px;
 }
 
+textarea {
+    padding: 10px;
+}
+
+
 input[type=radio] {
     cursor: pointer;
 }

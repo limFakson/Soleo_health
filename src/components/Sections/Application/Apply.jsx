@@ -84,7 +84,7 @@ function Apply() {
         throw new Error(`HTTP error! status: ${response.status}`);
       }
       const responseData = await response.json();
-      return responseData;
+      // return responseData;
     } catch (error) {
       console.error("Error fetching data:", error);
       throw error;
