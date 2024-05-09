@@ -97,7 +97,7 @@ function Apply() {
     createData(formData);
     // Add your form submission logic here
     // For example, sending the form data to a server
-    window.location.reload();
+    window.location.reload(); 
   };
 
   return (
