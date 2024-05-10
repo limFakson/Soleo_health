@@ -18,9 +18,19 @@ function Display() {
   };
   const dataObject = [...data];
   //   console.log(dataObject[3].data);
+  const handleNameClick = () => {
+    const id = e.target.getAttribute("data-id");
+    console.log("clicked ID:", id);
+  };
+
   useEffect(() => {
     fetchData();
   }, []);
+
+  data.forEach((item) => {
+    item.id = Math.random().toString(36).substr(2, 9); // Generate a unique ID
+  });
+  setData(dataSet);
 
   return (
     <div className="bg-[#e3efff]">
@@ -48,7 +58,9 @@ function Display() {
             <tbody>
               {dataObject.map((item, index) => (
                 <tr key={index}>
-                  <td>{item.data.name}</td>
+                  <td onClick={(e) => handleNameClick(e)} data-id={item.id}>
+                    {item.data.name}
+                  </td>
                   <td>{item.data.email}</td>
                   <td>{item.data.phone}</td>
                   <td>
