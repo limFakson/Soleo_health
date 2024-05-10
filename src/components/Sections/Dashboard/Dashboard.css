@@ -13,3 +13,8 @@ td {
 tr:nth-child(even) {
     background-color: #fff;
 }
+
+.hover:hover {
+    text-decoration: underline;
+    transition: ease .2s;
+}

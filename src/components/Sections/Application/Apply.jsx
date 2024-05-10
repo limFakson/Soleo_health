@@ -90,14 +90,18 @@ function Apply() {
       throw error;
     }
   };
+
   const handleSubmit = (e, formData) => {
     e.preventDefault();
     console.log("formData:", formData);
     console.log();
     createData(formData);
     // Add your form submission logic here
-    // For example, sending the form data to a server
-    window.location.reload(); 
+    const countdown = setTimeout(() => {
+      window.location.reload();
+    }, 3000);
+
+    return () => clearTimeout(countdown);
   };
 
   return (
