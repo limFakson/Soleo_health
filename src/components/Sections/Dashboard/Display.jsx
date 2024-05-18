@@ -112,7 +112,7 @@ function Display() {
           <div className="hidden relativex pt-4">
             <div className="personal">
               <div className="Fullname">
-                <h1>Fullname: {info.data.name}</h1>
+                {/* <h1>Fullname: {info.data.name}</h1> */}
               </div>
             </div>
           </div>
