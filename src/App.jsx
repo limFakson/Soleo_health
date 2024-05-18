@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import Home from "./components/Pages/Home";
-import Admin from "./components/Pages/Admin";
+import Home from "./components/Pages/Home.jsx";
+import Admin from "./components/Pages/Admin.jsx";
 
 function App() {
   return (

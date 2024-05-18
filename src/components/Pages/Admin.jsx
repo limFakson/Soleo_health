@@ -1,6 +1,6 @@
 import React from "react";
-import Footer from "../Hero/Footer";
-import Display from "../Sections/Dashboard/Display";
+import Footer from "../Hero/Footer.jsx";
+import Display from "../Sections/Dashboard/Display.jsx";
 function Application() {
   return (
     <>
