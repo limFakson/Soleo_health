@@ -1,5 +1,5 @@
 import React from "react";
-import Footer from "../Hero/Footer.jsx";
+import Footer from "../statics/Footer.jsx";
 import Display from "../Sections/Dashboard/Display.jsx";
 function Application() {
   return (
