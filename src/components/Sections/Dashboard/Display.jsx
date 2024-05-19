@@ -8,7 +8,7 @@ function Display() {
   const [data, setData] = useState([]);
   const [info, setInfo] = useState([]);
 
-  console.log(apiUrl);
+  // console.log(apiUrl);
 
   const fetchData = async () => {
     try {
