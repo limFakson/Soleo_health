@@ -8,6 +8,8 @@ function Display() {
   const [data, setData] = useState([]);
   const [info, setInfo] = useState([]);
 
+  console.log(apiUrl);
+
   const fetchData = async () => {
     try {
       let response = await fetch(apiUrl);
